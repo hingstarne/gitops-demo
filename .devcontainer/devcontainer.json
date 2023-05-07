@@ -1,0 +1,23 @@
+{
+	"name": "DevOps Dev Container",
+	"image": "iloveitaly/asdf-devcontainer:0-ubuntu-22.04",
+	"postCreateCommand": ".devcontainer/postCreate.sh",
+	"remoteUser": "vscode",
+	"containerEnv": {},
+	"shutdownAction": "stopContainer",
+	"forwardPorts": [80, 443],
+	"features": {
+		"ghcr.io/devcontainers/features/sshd:1": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers-contrib/features/autoenv:1": {},
+		"ghcr.io/devcontainers/features/github-cli:1": {},
+		"ghcr.io/devcontainers/features/aws-cli:1": {},
+		"docker-in-docker": {
+			"version": "latest",
+			"moby": true,
+			"dockerDashComposeVersion": "v2"
+		},
+        "ghcr.io/devcontainers-contrib/features/kind:1": {},
+	}
+}
